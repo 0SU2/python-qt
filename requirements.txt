@@ -1,0 +1,4 @@
+# PYTHON VERSION 3.9
+
+pyside2>=5.15.2,<5.16
+bcrypt==3.2.0

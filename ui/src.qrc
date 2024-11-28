@@ -1,0 +1,34 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>assets/cloudUpload.png</file>
+    <file>assets/logo-xs.png</file>
+    <file>assets/icons/cil-copy.png</file>
+    <file>assets/lock-black.png</file>
+    <file>assets/user-black.png</file>
+    <file>assets/icons/cil-lock-locked.png</file>
+    <file>assets/icons/cil-user.png</file>
+    <file>assets/Logo.png</file>
+    <file>assets/vin.png</file>
+    <file>assets/icons/cil-arrow-circle-bottom.png</file>
+    <file>assets/icons/cil-book.png</file>
+    <file>assets/icons/cil-check-circle.png</file>
+    <file>assets/icons/cil-chevron-double-up-alt.png</file>
+    <file>assets/icons/cil-description.png</file>
+    <file>assets/icons/cil-exit.png</file>
+    <file>assets/icons/cil-exit-to-app.png</file>
+    <file>assets/icons/cil-file.png</file>
+    <file>assets/icons/cil-folder.png</file>
+    <file>assets/icons/cil-folder-open.png</file>
+    <file>assets/icons/cil-library.png</file>
+    <file>assets/icons/cil-list.png</file>
+    <file>assets/icons/cil-newspaper.png</file>
+    <file>assets/icons/cil-notes.png</file>
+    <file>assets/icons/cil-options.png</file>
+    <file>assets/icons/cil-options-horizontal.png</file>
+    <file>assets/icons/cil-paperclip.png</file>
+    <file>assets/icons/cil-power-standby.png</file>
+    <file>assets/icons/cil-task.png</file>
+    <file>assets/icons/cil-view-quilt.png</file>
+    <file>assets/icons/cli-book-stack.png</file>
+  </qresource>
+</RCC>
