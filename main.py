@@ -7,14 +7,6 @@ from lib.static import UI_FOLDER, UI_COMPILED_FOLDER
 from lib.utils.ui_utils import compile_ui, compile_qrc
 from lib.views.login_view import LoginView
 from lib.views.main_view import MainView
-import mysql.connector
-
-connection = mysql.connector.connect(
-    host="127.0.0.1",
-    port=3306,
-    user="root",
-    password="root"
-)
 
 # * APPLICATION - ENTRY POINT
 # ---------------------------------------------------------------------------
@@ -27,6 +19,7 @@ if __name__ == "__main__":
     # * --------- QT APPLICATION ---------
     # Main application
     app = QApplication(sys.argv)
+    
     # Views
     login_view = LoginView()
     main_view = MainView()

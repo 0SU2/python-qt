@@ -1,24 +1,33 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainUI.ui'
+## Form generated from reading UI file 'mainUIHgnXkL.ui'
 ##
-## Created by: Qt User Interface Compiler version 5.15.2
+## Created by: Qt User Interface Compiler version 6.8.0
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide2.QtCore import *
-from PySide2.QtGui import *
-from PySide2.QtWidgets import *
-
-from  . import src_rc
+from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+    QMetaObject, QObject, QPoint, QRect,
+    QSize, QTime, QUrl, Qt)
+from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
+    QFont, QFontDatabase, QGradient, QIcon,
+    QImage, QKeySequence, QLinearGradient, QPainter,
+    QPalette, QPixmap, QRadialGradient, QTransform)
+from PySide6.QtWidgets import (QAbstractItemView, QAbstractScrollArea, QApplication, QComboBox,
+    QFrame, QGridLayout, QGroupBox, QHBoxLayout,
+    QHeaderView, QLabel, QMainWindow, QPushButton,
+    QScrollArea, QSizePolicy, QSlider, QSpacerItem,
+    QStackedWidget, QTableWidget, QTableWidgetItem, QVBoxLayout,
+    QWidget)
+import src_rc
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1209, 674)
+        MainWindow.resize(1320, 860)
         MainWindow.setMinimumSize(QSize(150, 0))
         MainWindow.setAutoFillBackground(False)
         MainWindow.setStyleSheet(u"")
@@ -42,8 +51,8 @@ class Ui_MainWindow(object):
 "background-color: rgb(0,0,0  );\n"
 "}")
         self.framePanel.setLocale(QLocale(QLocale.English, QLocale.UnitedStates))
-        self.framePanel.setFrameShape(QFrame.NoFrame)
-        self.framePanel.setFrameShadow(QFrame.Raised)
+        self.framePanel.setFrameShape(QFrame.Shape.NoFrame)
+        self.framePanel.setFrameShadow(QFrame.Shadow.Raised)
         self.framePanel.setLineWidth(1)
         self.verticalLayout = QVBoxLayout(self.framePanel)
         self.verticalLayout.setObjectName(u"verticalLayout")
@@ -54,8 +63,8 @@ class Ui_MainWindow(object):
 "border-radius: 10px;\n"
 "}")
         self.frameIPS.setLocale(QLocale(QLocale.English, QLocale.UnitedStates))
-        self.frameIPS.setFrameShape(QFrame.Panel)
-        self.frameIPS.setFrameShadow(QFrame.Sunken)
+        self.frameIPS.setFrameShape(QFrame.Shape.Panel)
+        self.frameIPS.setFrameShadow(QFrame.Shadow.Sunken)
         self.frameIPS.setLineWidth(3)
         self.frameIPS.setMidLineWidth(3)
         self.horizontalLayout_3 = QHBoxLayout(self.frameIPS)
@@ -78,10 +87,9 @@ class Ui_MainWindow(object):
         font = QFont()
         font.setPointSize(11)
         font.setBold(False)
-        font.setWeight(50)
         self.lblUser.setFont(font)
         self.lblUser.setLocale(QLocale(QLocale.English, QLocale.UnitedStates))
-        self.lblUser.setAlignment(Qt.AlignCenter)
+        self.lblUser.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.lblUser.setWordWrap(True)
 
         self.VLayoutCompany.addWidget(self.lblUser)
@@ -92,10 +100,9 @@ class Ui_MainWindow(object):
         font1 = QFont()
         font1.setPointSize(11)
         font1.setBold(True)
-        font1.setWeight(75)
         self.lblCompany.setFont(font1)
         self.lblCompany.setLocale(QLocale(QLocale.English, QLocale.UnitedStates))
-        self.lblCompany.setAlignment(Qt.AlignCenter)
+        self.lblCompany.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.lblCompany.setWordWrap(True)
 
         self.VLayoutCompany.addWidget(self.lblCompany)
@@ -106,17 +113,17 @@ class Ui_MainWindow(object):
 
         self.verticalLayout.addWidget(self.frameIPS)
 
-        self.verticalSpacer = QSpacerItem(20, 20, QSizePolicy.Minimum, QSizePolicy.Fixed)
+        self.verticalSpacer = QSpacerItem(20, 20, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Fixed)
 
         self.verticalLayout.addItem(self.verticalSpacer)
 
-        self.horizontalSpacer = QSpacerItem(300, 20, QSizePolicy.Fixed, QSizePolicy.Minimum)
+        self.horizontalSpacer = QSpacerItem(300, 20, QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Minimum)
 
         self.verticalLayout.addItem(self.horizontalSpacer)
 
         self.label = QLabel(self.framePanel)
         self.label.setObjectName(u"label")
-        sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
+        sizePolicy = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.label.sizePolicy().hasHeightForWidth())
@@ -124,7 +131,6 @@ class Ui_MainWindow(object):
         font2 = QFont()
         font2.setPointSize(6)
         font2.setBold(True)
-        font2.setWeight(75)
         self.label.setFont(font2)
         self.label.setStyleSheet(u"QLabel {\n"
 "	text-align: center;\n"
@@ -132,7 +138,7 @@ class Ui_MainWindow(object):
 "	border: none;\n"
 "}")
         self.label.setLocale(QLocale(QLocale.English, QLocale.UnitedStates))
-        self.label.setAlignment(Qt.AlignCenter)
+        self.label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
         self.verticalLayout.addWidget(self.label)
 
@@ -145,14 +151,14 @@ class Ui_MainWindow(object):
 "    background: white;\n"
 "}")
         self.frameLineNav.setLocale(QLocale(QLocale.English, QLocale.UnitedStates))
-        self.frameLineNav.setFrameShape(QFrame.StyledPanel)
-        self.frameLineNav.setFrameShadow(QFrame.Raised)
+        self.frameLineNav.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frameLineNav.setFrameShadow(QFrame.Shadow.Raised)
 
         self.verticalLayout.addWidget(self.frameLineNav)
 
         self.scrollAreaMenuLateral = QScrollArea(self.framePanel)
         self.scrollAreaMenuLateral.setObjectName(u"scrollAreaMenuLateral")
-        sizePolicy1 = QSizePolicy(QSizePolicy.Maximum, QSizePolicy.Expanding)
+        sizePolicy1 = QSizePolicy(QSizePolicy.Policy.Maximum, QSizePolicy.Policy.Expanding)
         sizePolicy1.setHorizontalStretch(0)
         sizePolicy1.setVerticalStretch(0)
         sizePolicy1.setHeightForWidth(self.scrollAreaMenuLateral.sizePolicy().hasHeightForWidth())
@@ -165,12 +171,12 @@ class Ui_MainWindow(object):
 "")
         self.scrollAreaMenuLateral.setLocale(QLocale(QLocale.English, QLocale.UnitedStates))
         self.scrollAreaMenuLateral.setLineWidth(0)
-        self.scrollAreaMenuLateral.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-        self.scrollAreaMenuLateral.setSizeAdjustPolicy(QAbstractScrollArea.AdjustIgnored)
+        self.scrollAreaMenuLateral.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
+        self.scrollAreaMenuLateral.setSizeAdjustPolicy(QAbstractScrollArea.SizeAdjustPolicy.AdjustIgnored)
         self.scrollAreaMenuLateral.setWidgetResizable(True)
         self.saNavBar = QWidget()
         self.saNavBar.setObjectName(u"saNavBar")
-        self.saNavBar.setGeometry(QRect(0, 0, 300, 440))
+        self.saNavBar.setGeometry(QRect(0, 0, 300, 625))
         self.saNavBar.setStyleSheet(u"QWidget {\n"
 "background-color: rgb(0,0,0);\n"
 "border: 0px solid rgb(53,73,154  );\n"
@@ -186,7 +192,7 @@ class Ui_MainWindow(object):
         self.btnNavHome.setSizePolicy(sizePolicy)
         self.btnNavHome.setMinimumSize(QSize(0, 40))
         self.btnNavHome.setFont(font1)
-        self.btnNavHome.setLayoutDirection(Qt.LeftToRight)
+        self.btnNavHome.setLayoutDirection(Qt.LayoutDirection.LeftToRight)
         self.btnNavHome.setStyleSheet(u"QPushButton {\n"
 "	background-position: left center;\n"
 "    background-repeat: no-repeat;\n"
@@ -210,10 +216,6 @@ class Ui_MainWindow(object):
 "	background-color: rgb(25,36,71);\n"
 "}")
         self.btnNavHome.setLocale(QLocale(QLocale.English, QLocale.UnitedStates))
-        icon = QIcon()
-        icon.addFile(u":/icons/assets/icons/cil-view-quilt.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.btnNavHome.setIcon(icon)
-        self.btnNavHome.setIconSize(QSize(20, 20))
         self.btnNavHome.setCheckable(True)
         self.btnNavHome.setChecked(False)
         self.btnNavHome.setAutoDefault(False)
@@ -227,7 +229,7 @@ class Ui_MainWindow(object):
         self.btnNavManageFiles.setSizePolicy(sizePolicy)
         self.btnNavManageFiles.setMinimumSize(QSize(0, 50))
         self.btnNavManageFiles.setFont(font1)
-        self.btnNavManageFiles.setLayoutDirection(Qt.LeftToRight)
+        self.btnNavManageFiles.setLayoutDirection(Qt.LayoutDirection.LeftToRight)
         self.btnNavManageFiles.setStyleSheet(u"QPushButton {\n"
 "	background-position: left center;\n"
 "    background-repeat: no-repeat;\n"
@@ -251,10 +253,6 @@ class Ui_MainWindow(object):
 "	background-color: rgb(25,36,71);\n"
 "}")
         self.btnNavManageFiles.setLocale(QLocale(QLocale.English, QLocale.UnitedStates))
-        icon1 = QIcon()
-        icon1.addFile(u":/icons/assets/icons/cil-folder-open.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.btnNavManageFiles.setIcon(icon1)
-        self.btnNavManageFiles.setIconSize(QSize(50, 50))
         self.btnNavManageFiles.setCheckable(True)
         self.btnNavManageFiles.setChecked(False)
         self.btnNavManageFiles.setAutoDefault(False)
@@ -268,7 +266,7 @@ class Ui_MainWindow(object):
         self.btnNavSearch.setSizePolicy(sizePolicy)
         self.btnNavSearch.setMinimumSize(QSize(0, 40))
         self.btnNavSearch.setFont(font1)
-        self.btnNavSearch.setLayoutDirection(Qt.LeftToRight)
+        self.btnNavSearch.setLayoutDirection(Qt.LayoutDirection.LeftToRight)
         self.btnNavSearch.setStyleSheet(u"QPushButton {\n"
 "	background-position: left center;\n"
 "    background-repeat: no-repeat;\n"
@@ -292,17 +290,81 @@ class Ui_MainWindow(object):
 "	background-color: rgb(25,36,71);\n"
 "}")
         self.btnNavSearch.setLocale(QLocale(QLocale.English, QLocale.UnitedStates))
-        icon2 = QIcon()
-        icon2.addFile(u":/icons/assets/icons/cil-description.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.btnNavSearch.setIcon(icon2)
-        self.btnNavSearch.setIconSize(QSize(20, 20))
         self.btnNavSearch.setCheckable(True)
         self.btnNavSearch.setChecked(False)
         self.btnNavSearch.setAutoDefault(False)
 
         self.verticalLayout_10.addWidget(self.btnNavSearch)
 
-        self.verticalSpacer_2 = QSpacerItem(10, 0, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.btnFlavors = QPushButton(self.saNavBar)
+        self.btnFlavors.setObjectName(u"btnFlavors")
+        sizePolicy.setHeightForWidth(self.btnFlavors.sizePolicy().hasHeightForWidth())
+        self.btnFlavors.setSizePolicy(sizePolicy)
+        self.btnFlavors.setMinimumSize(QSize(0, 40))
+        palette = QPalette()
+        brush = QBrush(QColor(255, 255, 255, 255))
+        brush.setStyle(Qt.SolidPattern)
+        palette.setBrush(QPalette.Active, QPalette.WindowText, brush)
+        brush1 = QBrush(QColor(0, 0, 0, 255))
+        brush1.setStyle(Qt.SolidPattern)
+        palette.setBrush(QPalette.Active, QPalette.Button, brush1)
+        palette.setBrush(QPalette.Active, QPalette.Text, brush)
+        palette.setBrush(QPalette.Active, QPalette.ButtonText, brush)
+        palette.setBrush(QPalette.Active, QPalette.Base, brush1)
+        palette.setBrush(QPalette.Active, QPalette.Window, brush1)
+        brush2 = QBrush(QColor(255, 255, 255, 128))
+        brush2.setStyle(Qt.SolidPattern)
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette.setBrush(QPalette.Active, QPalette.PlaceholderText, brush2)
+#endif
+        palette.setBrush(QPalette.Inactive, QPalette.WindowText, brush)
+        palette.setBrush(QPalette.Inactive, QPalette.Button, brush1)
+        palette.setBrush(QPalette.Inactive, QPalette.Text, brush)
+        palette.setBrush(QPalette.Inactive, QPalette.ButtonText, brush)
+        palette.setBrush(QPalette.Inactive, QPalette.Base, brush1)
+        palette.setBrush(QPalette.Inactive, QPalette.Window, brush1)
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette.setBrush(QPalette.Inactive, QPalette.PlaceholderText, brush2)
+#endif
+        palette.setBrush(QPalette.Disabled, QPalette.WindowText, brush)
+        palette.setBrush(QPalette.Disabled, QPalette.Button, brush1)
+        palette.setBrush(QPalette.Disabled, QPalette.Text, brush)
+        palette.setBrush(QPalette.Disabled, QPalette.ButtonText, brush)
+        palette.setBrush(QPalette.Disabled, QPalette.Base, brush1)
+        palette.setBrush(QPalette.Disabled, QPalette.Window, brush1)
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette.setBrush(QPalette.Disabled, QPalette.PlaceholderText, brush2)
+#endif
+        self.btnFlavors.setPalette(palette)
+        self.btnFlavors.setFont(font1)
+        self.btnFlavors.setMouseTracking(True)
+        self.btnFlavors.setStyleSheet(u"QPushButton {\n"
+"	background-position: left center;\n"
+"    background-repeat: no-repeat;\n"
+"	border: 0px solid rgb(255, 255, 255);\n"
+"	border-left: 0px solid rgb(27, 29, 35);\n"
+"	border-bottom: 0px solid rgb(255,255,255);\n"
+"	text-align: left;\n"
+"	color: white;\n"
+"	padding-left: 20px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"	border-bottom: 0px solid rgb(255,255,255);\n"
+"	background-color: rgb(119, 156, 171);\n"
+"}\n"
+"QPushButton:pressed {\n"
+"	border-bottom: 0px solid rgb(255,255,255);\n"
+"	background-color: rgb(53, 82, 74);\n"
+"}\n"
+"QPushButton:checked {\n"
+"	border-bottom: 1px solid rgb(255,255,255);\n"
+"	background-color: rgb(25,36,71);\n"
+"}")
+        self.btnFlavors.setCheckable(True)
+
+        self.verticalLayout_10.addWidget(self.btnFlavors)
+
+        self.verticalSpacer_2 = QSpacerItem(10, 0, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
         self.verticalLayout_10.addItem(self.verticalSpacer_2)
 
@@ -315,7 +377,7 @@ class Ui_MainWindow(object):
         self.HLayoutBtnInf.setObjectName(u"HLayoutBtnInf")
         self.btnLogout = QPushButton(self.framePanel)
         self.btnLogout.setObjectName(u"btnLogout")
-        sizePolicy2 = QSizePolicy(QSizePolicy.Ignored, QSizePolicy.Minimum)
+        sizePolicy2 = QSizePolicy(QSizePolicy.Policy.Ignored, QSizePolicy.Policy.Minimum)
         sizePolicy2.setHorizontalStretch(5)
         sizePolicy2.setVerticalStretch(0)
         sizePolicy2.setHeightForWidth(self.btnLogout.sizePolicy().hasHeightForWidth())
@@ -342,9 +404,9 @@ class Ui_MainWindow(object):
 "	background-color: rgb(53, 82, 74);\n"
 "}")
         self.btnLogout.setLocale(QLocale(QLocale.English, QLocale.UnitedStates))
-        icon3 = QIcon()
-        icon3.addFile(u":/icons/assets/icons/cil-exit.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.btnLogout.setIcon(icon3)
+        icon = QIcon()
+        icon.addFile(u":/icons/assets/icons/cil-exit.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.btnLogout.setIcon(icon)
         self.btnLogout.setIconSize(QSize(35, 35))
         self.btnLogout.setCheckable(False)
         self.btnLogout.setChecked(False)
@@ -377,9 +439,9 @@ class Ui_MainWindow(object):
 "	background-color: rgb(53, 82, 74);\n"
 "}")
         self.btnExit.setLocale(QLocale(QLocale.English, QLocale.UnitedStates))
-        icon4 = QIcon()
-        icon4.addFile(u":/icons/assets/icons/cil-power-standby.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.btnExit.setIcon(icon4)
+        icon1 = QIcon()
+        icon1.addFile(u":/icons/assets/icons/cil-power-standby.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.btnExit.setIcon(icon1)
         self.btnExit.setIconSize(QSize(35, 35))
         self.btnExit.setCheckable(False)
         self.btnExit.setChecked(False)
@@ -412,9 +474,9 @@ class Ui_MainWindow(object):
 "	background-color: rgb(53, 82, 74);\n"
 "}")
         self.btnAbout.setLocale(QLocale(QLocale.English, QLocale.UnitedStates))
-        icon5 = QIcon()
-        icon5.addFile(u":/icons/assets/icons/cil-options.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.btnAbout.setIcon(icon5)
+        icon2 = QIcon()
+        icon2.addFile(u":/icons/assets/icons/cil-options.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.btnAbout.setIcon(icon2)
         self.btnAbout.setIconSize(QSize(35, 35))
         self.btnAbout.setCheckable(False)
         self.btnAbout.setChecked(False)
@@ -436,8 +498,8 @@ class Ui_MainWindow(object):
 "    background: qlineargradient( x1:0 y1:0, x2:0.75 y2:0, stop:0 rgb(170,170,170), stop:1 white);\n"
 "}")
         self.frameSombra.setLocale(QLocale(QLocale.English, QLocale.UnitedStates))
-        self.frameSombra.setFrameShape(QFrame.StyledPanel)
-        self.frameSombra.setFrameShadow(QFrame.Raised)
+        self.frameSombra.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frameSombra.setFrameShadow(QFrame.Shadow.Raised)
 
         self.horizontalLayout.addWidget(self.frameSombra)
 
@@ -462,13 +524,13 @@ class Ui_MainWindow(object):
         self.verticalLayout_5.setObjectName(u"verticalLayout_5")
         self.lblWelcome = QLabel(self.sw1Welcome)
         self.lblWelcome.setObjectName(u"lblWelcome")
-        self.lblWelcome.setAlignment(Qt.AlignBottom|Qt.AlignHCenter)
+        self.lblWelcome.setAlignment(Qt.AlignmentFlag.AlignBottom|Qt.AlignmentFlag.AlignHCenter)
 
         self.verticalLayout_5.addWidget(self.lblWelcome)
 
         self.lblWelcomeText = QLabel(self.sw1Welcome)
         self.lblWelcomeText.setObjectName(u"lblWelcomeText")
-        self.lblWelcomeText.setAlignment(Qt.AlignHCenter|Qt.AlignTop)
+        self.lblWelcomeText.setAlignment(Qt.AlignmentFlag.AlignHCenter|Qt.AlignmentFlag.AlignTop)
         self.lblWelcomeText.setWordWrap(True)
 
         self.verticalLayout_5.addWidget(self.lblWelcomeText)
@@ -495,7 +557,6 @@ class Ui_MainWindow(object):
         font3 = QFont()
         font3.setPointSize(12)
         font3.setBold(False)
-        font3.setWeight(50)
         self.lblListAllFiles.setFont(font3)
         self.lblListAllFiles.setLocale(QLocale(QLocale.English, QLocale.UnitedStates))
 
@@ -505,30 +566,28 @@ class Ui_MainWindow(object):
         self.verticalLayout_6.addLayout(self.horizontalLayout_5)
 
         self.twListAllFiles = QTableWidget(self.sw1Files)
-        if (self.twListAllFiles.columnCount() < 3):
-            self.twListAllFiles.setColumnCount(3)
+        if (self.twListAllFiles.columnCount() < 4):
+            self.twListAllFiles.setColumnCount(4)
         __qtablewidgetitem = QTableWidgetItem()
         self.twListAllFiles.setHorizontalHeaderItem(0, __qtablewidgetitem)
         __qtablewidgetitem1 = QTableWidgetItem()
         self.twListAllFiles.setHorizontalHeaderItem(1, __qtablewidgetitem1)
         __qtablewidgetitem2 = QTableWidgetItem()
         self.twListAllFiles.setHorizontalHeaderItem(2, __qtablewidgetitem2)
+        __qtablewidgetitem3 = QTableWidgetItem()
+        self.twListAllFiles.setHorizontalHeaderItem(3, __qtablewidgetitem3)
         if (self.twListAllFiles.rowCount() < 2):
             self.twListAllFiles.setRowCount(2)
-        __qtablewidgetitem3 = QTableWidgetItem()
-        self.twListAllFiles.setVerticalHeaderItem(0, __qtablewidgetitem3)
         __qtablewidgetitem4 = QTableWidgetItem()
-        self.twListAllFiles.setVerticalHeaderItem(1, __qtablewidgetitem4)
+        self.twListAllFiles.setItem(0, 0, __qtablewidgetitem4)
         __qtablewidgetitem5 = QTableWidgetItem()
-        self.twListAllFiles.setItem(0, 0, __qtablewidgetitem5)
-        __qtablewidgetitem6 = QTableWidgetItem()
-        self.twListAllFiles.setItem(0, 1, __qtablewidgetitem6)
+        self.twListAllFiles.setItem(0, 1, __qtablewidgetitem5)
         self.twListAllFiles.setObjectName(u"twListAllFiles")
         self.twListAllFiles.setLocale(QLocale(QLocale.English, QLocale.UnitedStates))
-        self.twListAllFiles.setEditTriggers(QAbstractItemView.NoEditTriggers)
-        self.twListAllFiles.setSelectionMode(QAbstractItemView.SingleSelection)
-        self.twListAllFiles.setSelectionBehavior(QAbstractItemView.SelectRows)
-        self.twListAllFiles.setGridStyle(Qt.SolidLine)
+        self.twListAllFiles.setEditTriggers(QAbstractItemView.EditTrigger.NoEditTriggers)
+        self.twListAllFiles.setSelectionMode(QAbstractItemView.SelectionMode.SingleSelection)
+        self.twListAllFiles.setSelectionBehavior(QAbstractItemView.SelectionBehavior.SelectRows)
+        self.twListAllFiles.setGridStyle(Qt.PenStyle.SolidLine)
         self.twListAllFiles.horizontalHeader().setMinimumSectionSize(200)
         self.twListAllFiles.horizontalHeader().setDefaultSectionSize(250)
         self.twListAllFiles.horizontalHeader().setStretchLastSection(True)
@@ -539,12 +598,11 @@ class Ui_MainWindow(object):
         self.horizontalLayout_14.setObjectName(u"horizontalLayout_14")
         self.btnFilesDelete = QPushButton(self.sw1Files)
         self.btnFilesDelete.setObjectName(u"btnFilesDelete")
-        self.btnFilesDelete.setEnabled(False)
+        self.btnFilesDelete.setEnabled(True)
         self.btnFilesDelete.setMinimumSize(QSize(150, 37))
         font4 = QFont()
         font4.setPointSize(10)
         font4.setBold(True)
-        font4.setWeight(75)
         self.btnFilesDelete.setFont(font4)
         self.btnFilesDelete.setStyleSheet(u"QPushButton{\n"
 "	background-color: rgb(173, 8, 76);\n"
@@ -581,7 +639,7 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_14.addWidget(self.btnFilesUpload)
 
-        self.horizontalSpacer_6 = QSpacerItem(40, 50, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        self.horizontalSpacer_6 = QSpacerItem(40, 50, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
 
         self.horizontalLayout_14.addItem(self.horizontalSpacer_6)
 
@@ -684,7 +742,7 @@ class Ui_MainWindow(object):
         self.lblFilterFileSize = QLabel(self.groupBox)
         self.lblFilterFileSize.setObjectName(u"lblFilterFileSize")
         self.lblFilterFileSize.setFont(font6)
-        self.lblFilterFileSize.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+        self.lblFilterFileSize.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
 
         self.horizontalLayout_2.addWidget(self.lblFilterFileSize)
 
@@ -693,19 +751,19 @@ class Ui_MainWindow(object):
 
         self.hsFilterFileSize = QSlider(self.groupBox)
         self.hsFilterFileSize.setObjectName(u"hsFilterFileSize")
-        sizePolicy3 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Fixed)
+        sizePolicy3 = QSizePolicy(QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Fixed)
         sizePolicy3.setHorizontalStretch(0)
         sizePolicy3.setVerticalStretch(0)
         sizePolicy3.setHeightForWidth(self.hsFilterFileSize.sizePolicy().hasHeightForWidth())
         self.hsFilterFileSize.setSizePolicy(sizePolicy3)
-        self.hsFilterFileSize.setOrientation(Qt.Horizontal)
+        self.hsFilterFileSize.setOrientation(Qt.Orientation.Horizontal)
 
         self.gridLayout_2.addWidget(self.hsFilterFileSize, 3, 1, 1, 1)
 
 
         self.horizontalLayout_7.addWidget(self.groupBox)
 
-        self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
 
         self.horizontalLayout_7.addItem(self.horizontalSpacer_2)
 
@@ -738,27 +796,27 @@ class Ui_MainWindow(object):
         self.twListFiles = QTableWidget(self.sw1ManGui)
         if (self.twListFiles.columnCount() < 3):
             self.twListFiles.setColumnCount(3)
+        __qtablewidgetitem6 = QTableWidgetItem()
+        self.twListFiles.setHorizontalHeaderItem(0, __qtablewidgetitem6)
         __qtablewidgetitem7 = QTableWidgetItem()
-        self.twListFiles.setHorizontalHeaderItem(0, __qtablewidgetitem7)
+        self.twListFiles.setHorizontalHeaderItem(1, __qtablewidgetitem7)
         __qtablewidgetitem8 = QTableWidgetItem()
-        self.twListFiles.setHorizontalHeaderItem(1, __qtablewidgetitem8)
-        __qtablewidgetitem9 = QTableWidgetItem()
-        self.twListFiles.setHorizontalHeaderItem(2, __qtablewidgetitem9)
+        self.twListFiles.setHorizontalHeaderItem(2, __qtablewidgetitem8)
         if (self.twListFiles.rowCount() < 2):
             self.twListFiles.setRowCount(2)
+        __qtablewidgetitem9 = QTableWidgetItem()
+        self.twListFiles.setVerticalHeaderItem(0, __qtablewidgetitem9)
         __qtablewidgetitem10 = QTableWidgetItem()
-        self.twListFiles.setVerticalHeaderItem(0, __qtablewidgetitem10)
+        self.twListFiles.setVerticalHeaderItem(1, __qtablewidgetitem10)
         __qtablewidgetitem11 = QTableWidgetItem()
-        self.twListFiles.setVerticalHeaderItem(1, __qtablewidgetitem11)
+        self.twListFiles.setItem(0, 0, __qtablewidgetitem11)
         __qtablewidgetitem12 = QTableWidgetItem()
-        self.twListFiles.setItem(0, 0, __qtablewidgetitem12)
-        __qtablewidgetitem13 = QTableWidgetItem()
-        self.twListFiles.setItem(0, 1, __qtablewidgetitem13)
+        self.twListFiles.setItem(0, 1, __qtablewidgetitem12)
         self.twListFiles.setObjectName(u"twListFiles")
-        self.twListFiles.setEditTriggers(QAbstractItemView.NoEditTriggers)
-        self.twListFiles.setSelectionMode(QAbstractItemView.SingleSelection)
-        self.twListFiles.setSelectionBehavior(QAbstractItemView.SelectRows)
-        self.twListFiles.setGridStyle(Qt.SolidLine)
+        self.twListFiles.setEditTriggers(QAbstractItemView.EditTrigger.NoEditTriggers)
+        self.twListFiles.setSelectionMode(QAbstractItemView.SelectionMode.SingleSelection)
+        self.twListFiles.setSelectionBehavior(QAbstractItemView.SelectionBehavior.SelectRows)
+        self.twListFiles.setGridStyle(Qt.PenStyle.SolidLine)
         self.twListFiles.horizontalHeader().setMinimumSectionSize(200)
         self.twListFiles.horizontalHeader().setDefaultSectionSize(250)
         self.twListFiles.horizontalHeader().setStretchLastSection(True)
@@ -805,7 +863,7 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_13.addWidget(self.btnSearchUpload)
 
-        self.horizontalSpacer_5 = QSpacerItem(40, 50, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        self.horizontalSpacer_5 = QSpacerItem(40, 50, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
 
         self.horizontalLayout_13.addItem(self.horizontalSpacer_5)
 
@@ -831,6 +889,121 @@ class Ui_MainWindow(object):
         self.verticalLayout_7.addLayout(self.horizontalLayout_13)
 
         self.stacked1Contenido.addWidget(self.sw1ManGui)
+        self.sw1Flavors = QWidget()
+        self.sw1Flavors.setObjectName(u"sw1Flavors")
+        self.tableWidget = QTableWidget(self.sw1Flavors)
+        if (self.tableWidget.columnCount() < 5):
+            self.tableWidget.setColumnCount(5)
+        __qtablewidgetitem13 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(0, __qtablewidgetitem13)
+        __qtablewidgetitem14 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(1, __qtablewidgetitem14)
+        __qtablewidgetitem15 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(2, __qtablewidgetitem15)
+        __qtablewidgetitem16 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(3, __qtablewidgetitem16)
+        __qtablewidgetitem17 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(4, __qtablewidgetitem17)
+        self.tableWidget.setObjectName(u"tableWidget")
+        self.tableWidget.setGeometry(QRect(30, 100, 901, 661))
+        self.horizontalLayoutWidget = QWidget(self.sw1Flavors)
+        self.horizontalLayoutWidget.setObjectName(u"horizontalLayoutWidget")
+        self.horizontalLayoutWidget.setGeometry(QRect(30, 10, 901, 80))
+        self.horizontalLayout_4 = QHBoxLayout(self.horizontalLayoutWidget)
+        self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
+        self.horizontalLayout_4.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_8 = QHBoxLayout()
+        self.horizontalLayout_8.setObjectName(u"horizontalLayout_8")
+        self.label_3 = QLabel(self.horizontalLayoutWidget)
+        self.label_3.setObjectName(u"label_3")
+        self.label_3.setMinimumSize(QSize(13, 70))
+        self.label_3.setMaximumSize(QSize(13, 16777215))
+        self.label_3.setLocale(QLocale(QLocale.English, QLocale.UnitedStates))
+        self.label_3.setPixmap(QPixmap(u":/icons/assets/vin.png"))
+
+        self.horizontalLayout_8.addWidget(self.label_3)
+
+        self.lblListAllFiles_2 = QLabel(self.horizontalLayoutWidget)
+        self.lblListAllFiles_2.setObjectName(u"lblListAllFiles_2")
+        self.lblListAllFiles_2.setMinimumSize(QSize(0, 70))
+        self.lblListAllFiles_2.setFont(font3)
+        self.lblListAllFiles_2.setLocale(QLocale(QLocale.English, QLocale.UnitedStates))
+
+        self.horizontalLayout_8.addWidget(self.lblListAllFiles_2)
+
+
+        self.horizontalLayout_4.addLayout(self.horizontalLayout_8)
+
+        self.layoutWidget = QWidget(self.sw1Flavors)
+        self.layoutWidget.setObjectName(u"layoutWidget")
+        self.layoutWidget.setGeometry(QRect(30, 770, 901, 52))
+        self.horizontalLayout_15 = QHBoxLayout(self.layoutWidget)
+        self.horizontalLayout_15.setObjectName(u"horizontalLayout_15")
+        self.horizontalLayout_15.setContentsMargins(0, 0, 0, 0)
+        self.btnFilesDelete_2 = QPushButton(self.layoutWidget)
+        self.btnFilesDelete_2.setObjectName(u"btnFilesDelete_2")
+        self.btnFilesDelete_2.setEnabled(True)
+        self.btnFilesDelete_2.setMinimumSize(QSize(150, 37))
+        self.btnFilesDelete_2.setFont(font4)
+        self.btnFilesDelete_2.setStyleSheet(u"QPushButton{\n"
+"	background-color: rgb(173, 8, 76);\n"
+"	border-radius: 10px;\n"
+"	color: white;\n"
+"}\n"
+"QPushButton:hover{\n"
+"	background-color: rgb(228, 76, 119);\n"
+"}\n"
+"QPushButton:pressed{\n"
+"	background-color: rgb(119, 0, 37);\n"
+"}\n"
+"")
+        self.btnFilesDelete_2.setLocale(QLocale(QLocale.English, QLocale.UnitedStates))
+
+        self.horizontalLayout_15.addWidget(self.btnFilesDelete_2)
+
+        self.btnFilesUpload_2 = QPushButton(self.layoutWidget)
+        self.btnFilesUpload_2.setObjectName(u"btnFilesUpload_2")
+        self.btnFilesUpload_2.setMinimumSize(QSize(150, 37))
+        self.btnFilesUpload_2.setFont(font4)
+        self.btnFilesUpload_2.setStyleSheet(u"QPushButton {\n"
+"	background-color: rgb(0,167,208);\n"
+"	border-radius: 10px;\n"
+"	color: white;\n"
+"}\n"
+"QPushButton:hover {\n"
+"	background-color: rgb(21,210,255);\n"
+"}\n"
+"QPushButton:pressed {\n"
+"	background-color: rgb(0,128,158);\n"
+"}")
+        self.btnFilesUpload_2.setLocale(QLocale(QLocale.English, QLocale.UnitedStates))
+
+        self.horizontalLayout_15.addWidget(self.btnFilesUpload_2)
+
+        self.horizontalSpacer_7 = QSpacerItem(40, 50, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+
+        self.horizontalLayout_15.addItem(self.horizontalSpacer_7)
+
+        self.btnFilesOpen_2 = QPushButton(self.layoutWidget)
+        self.btnFilesOpen_2.setObjectName(u"btnFilesOpen_2")
+        self.btnFilesOpen_2.setMinimumSize(QSize(250, 37))
+        self.btnFilesOpen_2.setFont(font4)
+        self.btnFilesOpen_2.setStyleSheet(u"QPushButton {\n"
+"	background-color: rgb(0,167,208);\n"
+"	border-radius: 10px;\n"
+"	color: white;\n"
+"}\n"
+"QPushButton:hover {\n"
+"	background-color: rgb(21,210,255);\n"
+"}\n"
+"QPushButton:pressed {\n"
+"	background-color: rgb(0,128,158);\n"
+"}")
+        self.btnFilesOpen_2.setLocale(QLocale(QLocale.English, QLocale.UnitedStates))
+
+        self.horizontalLayout_15.addWidget(self.btnFilesOpen_2)
+
+        self.stacked1Contenido.addWidget(self.sw1Flavors)
 
         self.verticalLayout_2.addWidget(self.stacked1Contenido)
 
@@ -860,14 +1033,15 @@ class Ui_MainWindow(object):
 #if QT_CONFIG(shortcut)
         self.btnNavHome.setShortcut(QCoreApplication.translate("MainWindow", u"Enter", None))
 #endif // QT_CONFIG(shortcut)
-        self.btnNavManageFiles.setText(QCoreApplication.translate("MainWindow", u"Manage Files", None))
+        self.btnNavManageFiles.setText(QCoreApplication.translate("MainWindow", u"Clientes", None))
 #if QT_CONFIG(shortcut)
         self.btnNavManageFiles.setShortcut(QCoreApplication.translate("MainWindow", u"Enter", None))
 #endif // QT_CONFIG(shortcut)
-        self.btnNavSearch.setText(QCoreApplication.translate("MainWindow", u"Search", None))
+        self.btnNavSearch.setText(QCoreApplication.translate("MainWindow", u"Proveedores", None))
 #if QT_CONFIG(shortcut)
         self.btnNavSearch.setShortcut(QCoreApplication.translate("MainWindow", u"Enter", None))
 #endif // QT_CONFIG(shortcut)
+        self.btnFlavors.setText(QCoreApplication.translate("MainWindow", u"Sabores", None))
 #if QT_CONFIG(tooltip)
         self.btnLogout.setToolTip(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Logout</p></body></html>", None))
 #endif // QT_CONFIG(tooltip)
@@ -882,17 +1056,15 @@ class Ui_MainWindow(object):
         self.btnAbout.setText("")
         self.lblWelcome.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><br/></p><p><br/></p><p><img src=\":/icons/assets/Logo.png\"/></p></body></html>", None))
         self.lblWelcomeText.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><br/></p><p><span style=\" font-size:16pt; font-weight:600;\">\u00a1Welcome!</span></p><p><span style=\" font-size:12pt;\">Select an entry from the navigation bar to start.</span></p></body></html>", None))
-        self.lblListAllFiles.setText(QCoreApplication.translate("MainWindow", u"List of stored files", None))
+        self.lblListAllFiles.setText(QCoreApplication.translate("MainWindow", u"Clientes", None))
         ___qtablewidgetitem = self.twListAllFiles.horizontalHeaderItem(0)
-        ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"NAME", None));
+        ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"ID", None));
         ___qtablewidgetitem1 = self.twListAllFiles.horizontalHeaderItem(1)
-        ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"FECHA", None));
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"Nombre", None));
         ___qtablewidgetitem2 = self.twListAllFiles.horizontalHeaderItem(2)
-        ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"SIZE", None));
-        ___qtablewidgetitem3 = self.twListAllFiles.verticalHeaderItem(0)
-        ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"1", None));
-        ___qtablewidgetitem4 = self.twListAllFiles.verticalHeaderItem(1)
-        ___qtablewidgetitem4.setText(QCoreApplication.translate("MainWindow", u"2", None));
+        ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"Preferencias de sabor", None));
+        ___qtablewidgetitem3 = self.twListAllFiles.horizontalHeaderItem(3)
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"Historial de combinaciones", None));
 
         __sortingEnabled = self.twListAllFiles.isSortingEnabled()
         self.twListAllFiles.setSortingEnabled(False)
@@ -912,16 +1084,16 @@ class Ui_MainWindow(object):
         self.label_7.setText(QCoreApplication.translate("MainWindow", u"Size", None))
         self.lblFilterFileSize.setText(QCoreApplication.translate("MainWindow", u"<1MB", None))
         self.lblList.setText(QCoreApplication.translate("MainWindow", u"List of stored files", None))
-        ___qtablewidgetitem5 = self.twListFiles.horizontalHeaderItem(0)
-        ___qtablewidgetitem5.setText(QCoreApplication.translate("MainWindow", u"NAME", None));
-        ___qtablewidgetitem6 = self.twListFiles.horizontalHeaderItem(1)
-        ___qtablewidgetitem6.setText(QCoreApplication.translate("MainWindow", u"TYPE", None));
-        ___qtablewidgetitem7 = self.twListFiles.horizontalHeaderItem(2)
-        ___qtablewidgetitem7.setText(QCoreApplication.translate("MainWindow", u"SIZE", None));
-        ___qtablewidgetitem8 = self.twListFiles.verticalHeaderItem(0)
-        ___qtablewidgetitem8.setText(QCoreApplication.translate("MainWindow", u"1", None));
-        ___qtablewidgetitem9 = self.twListFiles.verticalHeaderItem(1)
-        ___qtablewidgetitem9.setText(QCoreApplication.translate("MainWindow", u"2", None));
+        ___qtablewidgetitem4 = self.twListFiles.horizontalHeaderItem(0)
+        ___qtablewidgetitem4.setText(QCoreApplication.translate("MainWindow", u"NAME", None));
+        ___qtablewidgetitem5 = self.twListFiles.horizontalHeaderItem(1)
+        ___qtablewidgetitem5.setText(QCoreApplication.translate("MainWindow", u"TYPE", None));
+        ___qtablewidgetitem6 = self.twListFiles.horizontalHeaderItem(2)
+        ___qtablewidgetitem6.setText(QCoreApplication.translate("MainWindow", u"SIZE", None));
+        ___qtablewidgetitem7 = self.twListFiles.verticalHeaderItem(0)
+        ___qtablewidgetitem7.setText(QCoreApplication.translate("MainWindow", u"1", None));
+        ___qtablewidgetitem8 = self.twListFiles.verticalHeaderItem(1)
+        ___qtablewidgetitem8.setText(QCoreApplication.translate("MainWindow", u"2", None));
 
         __sortingEnabled1 = self.twListFiles.isSortingEnabled()
         self.twListFiles.setSortingEnabled(False)
@@ -930,5 +1102,19 @@ class Ui_MainWindow(object):
         self.btnSearchDelete.setText(QCoreApplication.translate("MainWindow", u"Delete", None))
         self.btnSearchUpload.setText(QCoreApplication.translate("MainWindow", u"Upload", None))
         self.btnSearchOpen.setText(QCoreApplication.translate("MainWindow", u"Open", None))
+        ___qtablewidgetitem9 = self.tableWidget.horizontalHeaderItem(0)
+        ___qtablewidgetitem9.setText(QCoreApplication.translate("MainWindow", u"ID", None));
+        ___qtablewidgetitem10 = self.tableWidget.horizontalHeaderItem(1)
+        ___qtablewidgetitem10.setText(QCoreApplication.translate("MainWindow", u"Nombre", None));
+        ___qtablewidgetitem11 = self.tableWidget.horizontalHeaderItem(2)
+        ___qtablewidgetitem11.setText(QCoreApplication.translate("MainWindow", u"Intensidad", None));
+        ___qtablewidgetitem12 = self.tableWidget.horizontalHeaderItem(3)
+        ___qtablewidgetitem12.setText(QCoreApplication.translate("MainWindow", u"Tipo", None));
+        ___qtablewidgetitem13 = self.tableWidget.horizontalHeaderItem(4)
+        ___qtablewidgetitem13.setText(QCoreApplication.translate("MainWindow", u"Fecha", None));
+        self.lblListAllFiles_2.setText(QCoreApplication.translate("MainWindow", u"Sabores", None))
+        self.btnFilesDelete_2.setText(QCoreApplication.translate("MainWindow", u"Delete", None))
+        self.btnFilesUpload_2.setText(QCoreApplication.translate("MainWindow", u"Upload", None))
+        self.btnFilesOpen_2.setText(QCoreApplication.translate("MainWindow", u"Open", None))
     # retranslateUi
 

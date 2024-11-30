@@ -1,9 +1,11 @@
-from PySide2.QtWidgets import QMainWindow, QMessageBox, QPushButton
-from PySide2.QtGui import QIcon, QPixmap
+from PySide6.QtWidgets import QMainWindow, QMessageBox, QPushButton, QTableWidget
+from PyQt6.QtGui import QIcon, QPixmap
 
 from lib.static import LOGO_FILE, LOGO_XS_FILE, MSG_ABOUT
 from ui.compiled.mainUI import Ui_MainWindow
 
+from lib.services.server import conectar_base_datos
+import mysql.connector
 
 class MainView(QMainWindow):
     def __init__(self):
@@ -15,7 +17,7 @@ class MainView(QMainWindow):
         # * Config UI
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
-        self.setWindowTitle("Python Qt Dashboard Example")
+        self.setWindowTitle("Tienda")
         self.setWindowIcon(QIcon(str(LOGO_XS_FILE)))
 
         # * Set initial state
@@ -30,6 +32,39 @@ class MainView(QMainWindow):
         self.ui.btnExit.clicked.connect(self.close)
         self.ui.btnLogout.clicked.connect(self.logout)
         self.ui.btnAbout.clicked.connect(self.about)
+
+        self.ui.btnFilesDelete.clicked.connect(self.deleteSelected)
+
+    # actions
+    def deleteSelected(self):
+        self.support = []
+        self.rango = 0
+        self.selected = self.ui.twListAllFiles.selectedItems()
+        for item in self.selected:
+            self.support.insert(self.rango, item.text())
+            self.rango += 1
+        self.conexion = conectar_base_datos()
+
+        if self.conexion:
+            try:
+                self.msqlcursor = self.conexion.cursor()
+                self.mysqlcursor.execute("SELECT * FROM cliente")
+                print(self.mysqlcursor.fetchall())
+            except mysql.connector.Error as err:
+                QMessageBox.warning(self, "Error", f"Error: {err}")
+
+    # getting of client
+    def llenarTabla(self):
+        self.conexion = conectar_base_datos()
+        if self.conexion:
+            try:
+                self.mysqlcursor = self.conexion.cursor()
+                self.mysqlcursor.execute("SELECT * FROM cliente")
+                result = self.mysqlcursor.fetchall()
+                return result
+            except mysql.connector.Error as err:
+                QMessageBox.warning(self, "Error", f"Error: {err}")
+                return
 
     # * -------------- INHERIT EVENT HANDLES ---------------
     def closeEvent(self, event):
@@ -48,6 +83,22 @@ class MainView(QMainWindow):
         pressed_btn_nav.setChecked(True)
         # * Set active the selected page
         self.ui.stacked1Contenido.setCurrentIndex(stack1_index)
+        
+        # load data from the first table
+        if stack1_index == 1:
+            allClients = self.llenarTabla()
+            if allClients:
+                lenght = len(allClients)
+                self.ui.twListAllFiles.setRowCount(lenght)
+                fila = 0
+                for item in allClients:
+                    self.ui.twListAllFiles.setItem(fila, 0, QTableWidgetItem(str(item[0])))
+                    self.ui.twListAllFiles.setItem(fila, 1, QTableWidgetItem(str(item[1])))
+                    self.ui.twListAllFiles.setItem(fila, 2, QTableWidgetItem(str(item[2])))
+                    self.ui.twListAllFiles.setItem(fila, 3, QTableWidgetItem(str(item[3])))
+                    fila += 1
+            else:
+                print(f"Error")
 
     def logout(self):
         self.login_view.initial_state()

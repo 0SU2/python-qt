@@ -65,7 +65,7 @@
        <property name="geometry">
         <rect>
          <x>70</x>
-         <y>390</y>
+         <y>370</y>
          <width>261</width>
          <height>41</height>
         </rect>
@@ -73,7 +73,6 @@
        <property name="font">
         <font>
          <pointsize>12</pointsize>
-         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -81,7 +80,7 @@
         <cursorShape>ArrowCursor</cursorShape>
        </property>
        <property name="mouseTracking">
-        <bool>false</bool>
+        <bool>true</bool>
        </property>
        <property name="toolTip">
         <string/>
@@ -143,7 +142,6 @@ QPushButton:pressed {
         <font>
          <family>MS Shell Dlg 2</family>
          <pointsize>9</pointsize>
-         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -248,7 +246,6 @@ color: black;</string>
         <font>
          <family>MS Shell Dlg 2</family>
          <pointsize>10</pointsize>
-         <weight>75</weight>
          <italic>false</italic>
          <bold>true</bold>
         </font>
@@ -368,7 +365,6 @@ background-color: rgba(255, 255, 255, 0);</string>
        </property>
        <property name="font">
         <font>
-         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -389,33 +385,6 @@ QPushButton:pressed {
        </property>
        <property name="text">
         <string>X</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label">
-       <property name="geometry">
-        <rect>
-         <x>60</x>
-         <y>350</y>
-         <width>281</width>
-         <height>41</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>10</pointsize>
-         <weight>50</weight>
-         <bold>false</bold>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgba(255, 255, 255,0);
-color: rgb(100, 100, 100);</string>
-       </property>
-       <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;user&lt;/span&gt;:admin   &lt;span style=&quot; font-weight:600;&quot;&gt;password&lt;/span&gt;:admin123&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
        </property>
       </widget>
      </widget>
