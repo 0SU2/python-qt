@@ -1,34 +1,35 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'loginUI.ui'
+## Form generated from reading UI file 'logintestCFBqHl.ui'
 ##
-## Created by: Qt User Interface Compiler version 5.15.2
+## Created by: Qt User Interface Compiler version 6.4.3
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide2.QtCore import *
-from PySide2.QtGui import *
-from PySide2.QtWidgets import *
+from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+    QMetaObject, QObject, QPoint, QRect,
+    QSize, QTime, QUrl, Qt)
+from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
+    QFont, QFontDatabase, QGradient, QIcon,
+    QImage, QKeySequence, QLinearGradient, QPainter,
+    QPalette, QPixmap, QRadialGradient, QTransform)
+from PySide6.QtWidgets import (QApplication, QFrame, QHBoxLayout, QLabel,
+    QLineEdit, QMainWindow, QPushButton, QSizePolicy,
+    QWidget)
+from . import src_rc
 
-from  . import src_rc
-
-class Ui_Login_Menu(object):
-    def setupUi(self, Login_Menu):
-        if not Login_Menu.objectName():
-            Login_Menu.setObjectName(u"Login_Menu")
-        Login_Menu.resize(422, 550)
-        Login_Menu.setMinimumSize(QSize(422, 550))
-        Login_Menu.setMaximumSize(QSize(422, 550))
-        self.centralwidget = QWidget(Login_Menu)
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        if not MainWindow.objectName():
+            MainWindow.setObjectName(u"MainWindow")
+        MainWindow.resize(424, 549)
+        self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
-        self.verticalLayout = QVBoxLayout(self.centralwidget)
-        self.verticalLayout.setSpacing(0)
-        self.verticalLayout.setObjectName(u"verticalLayout")
-        self.verticalLayout.setContentsMargins(10, 10, 10, 10)
         self.dropShadowFrame = QFrame(self.centralwidget)
         self.dropShadowFrame.setObjectName(u"dropShadowFrame")
+        self.dropShadowFrame.setGeometry(QRect(10, 10, 402, 530))
         self.dropShadowFrame.setStyleSheet(u"QFrame {	\n"
 "	background-color: qlineargradient(spread:pad, x1:0.522727, y1:1, x2:0.528, y2:0, stop:0 rgba(24, 190, 183, 255), stop:0.323864 rgba(227, 238, 244, 255), stop:1 rgba(249, 249, 249, 255));\n"
 "\n"
@@ -40,14 +41,13 @@ class Ui_Login_Menu(object):
         self.button_login = QPushButton(self.dropShadowFrame)
         self.button_login.setObjectName(u"button_login")
         self.button_login.setEnabled(True)
-        self.button_login.setGeometry(QRect(70, 390, 261, 41))
+        self.button_login.setGeometry(QRect(70, 370, 261, 41))
         font = QFont()
         font.setPointSize(12)
         font.setBold(True)
-        font.setWeight(75)
         self.button_login.setFont(font)
         self.button_login.setCursor(QCursor(Qt.ArrowCursor))
-        self.button_login.setMouseTracking(False)
+        self.button_login.setMouseTracking(True)
         self.button_login.setLayoutDirection(Qt.LeftToRight)
         self.button_login.setAutoFillBackground(False)
         self.button_login.setStyleSheet(u"QPushButton {\n"
@@ -71,10 +71,9 @@ class Ui_Login_Menu(object):
         self.text_password.setEnabled(True)
         self.text_password.setGeometry(QRect(120, 310, 191, 21))
         font1 = QFont()
-        font1.setFamily(u"MS Shell Dlg 2")
+        font1.setFamilies([u"MS Shell Dlg 2"])
         font1.setPointSize(9)
         font1.setBold(True)
-        font1.setWeight(75)
         self.text_password.setFont(font1)
         self.text_password.setAcceptDrops(True)
         self.text_password.setAutoFillBackground(False)
@@ -106,11 +105,10 @@ class Ui_Login_Menu(object):
         self.text_username.setEnabled(True)
         self.text_username.setGeometry(QRect(120, 260, 191, 21))
         font2 = QFont()
-        font2.setFamily(u"MS Shell Dlg 2")
+        font2.setFamilies([u"MS Shell Dlg 2"])
         font2.setPointSize(10)
         font2.setBold(True)
         font2.setItalic(False)
-        font2.setWeight(75)
         self.text_username.setFont(font2)
         self.text_username.setAcceptDrops(True)
         self.text_username.setAutoFillBackground(False)
@@ -153,7 +151,6 @@ class Ui_Login_Menu(object):
         self.button_close.setGeometry(QRect(360, 10, 31, 21))
         font3 = QFont()
         font3.setBold(True)
-        font3.setWeight(75)
         self.button_close.setFont(font3)
         self.button_close.setStyleSheet(u"QPushButton {\n"
 "   border:none;\n"
@@ -168,50 +165,31 @@ class Ui_Login_Menu(object):
 "QPushButton:pressed {\n"
 "	background-color: rgb(15, 68, 106);\n"
 "}")
-        self.label = QLabel(self.dropShadowFrame)
-        self.label.setObjectName(u"label")
-        self.label.setGeometry(QRect(60, 350, 281, 41))
-        font4 = QFont()
-        font4.setPointSize(10)
-        font4.setBold(False)
-        font4.setWeight(50)
-        self.label.setFont(font4)
-        self.label.setStyleSheet(u"background-color: rgba(255, 255, 255,0);\n"
-"color: rgb(100, 100, 100);")
-        self.label.setAlignment(Qt.AlignCenter)
+        MainWindow.setCentralWidget(self.centralwidget)
 
-        self.verticalLayout.addWidget(self.dropShadowFrame)
-
-        Login_Menu.setCentralWidget(self.centralwidget)
-        QWidget.setTabOrder(self.text_username, self.text_password)
-        QWidget.setTabOrder(self.text_password, self.button_login)
-        QWidget.setTabOrder(self.button_login, self.button_close)
-
-        self.retranslateUi(Login_Menu)
-        self.text_password.returnPressed.connect(self.button_login.click)
+        self.retranslateUi(MainWindow)
 
         self.button_login.setDefault(False)
 
 
-        QMetaObject.connectSlotsByName(Login_Menu)
+        QMetaObject.connectSlotsByName(MainWindow)
     # setupUi
 
-    def retranslateUi(self, Login_Menu):
-        Login_Menu.setWindowTitle(QCoreApplication.translate("Login_Menu", u"MainWindow", None))
+    def retranslateUi(self, MainWindow):
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
 #if QT_CONFIG(tooltip)
         self.button_login.setToolTip("")
 #endif // QT_CONFIG(tooltip)
-        self.button_login.setText(QCoreApplication.translate("Login_Menu", u"Log In", None))
+        self.button_login.setText(QCoreApplication.translate("MainWindow", u"Log In", None))
         self.text_password.setInputMask("")
         self.text_password.setText("")
-        self.text_password.setPlaceholderText(QCoreApplication.translate("Login_Menu", u"Password", None))
+        self.text_password.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Password", None))
         self.text_username.setInputMask("")
         self.text_username.setText("")
-        self.text_username.setPlaceholderText(QCoreApplication.translate("Login_Menu", u"User", None))
+        self.text_username.setPlaceholderText(QCoreApplication.translate("MainWindow", u"User", None))
         self.img_Logo.setText("")
         self.icon_user.setText("")
         self.icon_lock.setText("")
-        self.button_close.setText(QCoreApplication.translate("Login_Menu", u"X", None))
-        self.label.setText(QCoreApplication.translate("Login_Menu", u"<html><head/><body><p><span style=\" font-weight:600;\">user</span>:admin   <span style=\" font-weight:600;\">password</span>:admin123</p></body></html>", None))
+        self.button_close.setText(QCoreApplication.translate("MainWindow", u"X", None))
     # retranslateUi
 
