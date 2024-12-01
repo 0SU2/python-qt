@@ -2,7 +2,7 @@ from PySide6.QtCore import Qt
 from PySide6.QtWidgets import QMainWindow, QPushButton, QMessageBox, QTableWidgetItem, QTableWidget
 from PySide6.QtGui import QIcon
 
-from lib.static import LOGO_FILE, LOGO_XS_FILE, MSG_ABOUT
+from lib.static import LOGO_FILE, LOGO_XS_FILE
 from ui.compiled.ui_testing2 import Ui_MainWindow
 
 from lib.services.server import conectar_base_datos
@@ -18,7 +18,7 @@ class MainView(QMainWindow, Ui_MainWindow):
         # * Config UI
         self.setupUi(self)
         self.setWindowTitle("Chicles") 
-        self.setWindowIcon(QIcon(fileName=LOGO_XS_FILE))
+        self.setWindowIcon(QIcon(str(LOGO_XS_FILE)))
 
         # * Set initial state
         self.username = None
@@ -36,38 +36,39 @@ class MainView(QMainWindow, Ui_MainWindow):
 
     # getting of client
     def base_datos(self, table):
-        self.conexion = conectar_base_datos()
-        if self.conexion:
+        conexion = conectar_base_datos()
+        if conexion:
             try:
-                self.mysqlcursor = self.conexion.cursor()
-                self.mysqlcursor.execute(f"SELECT * FROM {table}")
-                result = self.mysqlcursor.fetchall()
-                return result
+                mysqlcursor = conexion.cursor()
+                mysqlcursor.execute(f"SELECT * FROM {table}")
+                self.result = mysqlcursor.fetchall()
+                conexion.close()
+                return self.result
             except mysql.connector.Error as err:
                 QMessageBox.warning(self, "Error", f"Error: {err}")
                 return
             
-        # actions
+    # actions
     def deleteSelected(self):
         self.support = []
-        self.rango = 0
-        self.conexion = conectar_base_datos()
-        self.msqlcursor = self.conexion.cursor()
-        if self.conexion:
+        rango = 0
+        conexion = conectar_base_datos()
+        if conexion:
             try:
+                mysqlcursor = conexion.cursor() 
                 current_view = self.stacked1Contenido.currentIndex()
                 if current_view == 0:
                     self.selected = self.tableProvider.selectedItems()
+                    mysqlcursor.execute("SELECT * FROM cliente")
                     for item in self.selected:
-                        self.support.insert(self.rango, item.text())
-                        self.rango += 1
-                    self.conexion = conectar_base_datos()
-                    self.mysqlcursor.execute("SELECT * FROM cliente")
-                    print(self.support)
-                    print(self.mysqlcursor.fetchall())
-                    
+                        self.support.insert(rango, item.text())
+                        rango += 1
+                    QMessageBox.warning(self, "Advertencia!", f"Estas apunto de borrar los datos: {str(self.support)}")
+                conexion.close()
+                return   
             except mysql.connector.Error as err:
                 QMessageBox.warning(self, "Error", f"Error: {err}")
+                return
     
     # query throw data
     def llenar_tablas_datos(self, tabla, QTableWidget):
@@ -90,6 +91,7 @@ class MainView(QMainWindow, Ui_MainWindow):
     # * ------------ APPLICATION EVENT HANDLES ------------
     def initial_state(self):
         """ Set initial state for the window """
+        self.lbCompany.setText("Chicles")
         self.lbUser.setText(self.username if self.username is not None else "USER")
         self.stacked1Contenido.setCurrentIndex(0)
         for btn_nav in self.findChildren(QPushButton): btn_nav.setChecked(False)

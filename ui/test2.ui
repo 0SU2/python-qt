@@ -37,7 +37,10 @@
             </property>
             <layout class="QHBoxLayout" name="horizontalLayout_6">
              <item>
-              <widget class="QLabel" name="Logo">
+              <widget class="QLabel" name="img_Logo">
+               <property name="styleSheet">
+                <string notr="true">image: url(:/icons/assets/Logo.png);</string>
+               </property>
                <property name="text">
                 <string/>
                </property>
@@ -384,6 +387,8 @@
    </layout>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="src.qrc"/>
+ </resources>
  <connections/>
 </ui>

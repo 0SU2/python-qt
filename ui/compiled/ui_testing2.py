@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'test2HbECEz.ui'
+## Form generated from reading UI file 'test2NVGrjg.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.4.3
 ##
@@ -19,6 +19,7 @@ from PySide6.QtWidgets import (QAbstractItemView, QAbstractScrollArea, QApplicat
     QHBoxLayout, QHeaderView, QLabel, QMainWindow,
     QPushButton, QSizePolicy, QSpacerItem, QStackedWidget,
     QTableWidget, QTableWidgetItem, QVBoxLayout, QWidget)
+from . import src_rc
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -45,10 +46,11 @@ class Ui_MainWindow(object):
         self.frame_2.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_6 = QHBoxLayout(self.frame_2)
         self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
-        self.Logo = QLabel(self.frame_2)
-        self.Logo.setObjectName(u"Logo")
+        self.img_Logo = QLabel(self.frame_2)
+        self.img_Logo.setObjectName(u"img_Logo")
+        self.img_Logo.setStyleSheet(u"image: url(:/icons/assets/Logo.png);")
 
-        self.horizontalLayout_6.addWidget(self.Logo)
+        self.horizontalLayout_6.addWidget(self.img_Logo)
 
         self.widget_4 = QWidget(self.frame_2)
         self.widget_4.setObjectName(u"widget_4")
@@ -285,7 +287,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
-        self.Logo.setText("")
+        self.img_Logo.setText("")
         self.lbUser.setText("")
         self.lbCompany.setText("")
         self.btnProvider.setText(QCoreApplication.translate("MainWindow", u"Proveedores", None))

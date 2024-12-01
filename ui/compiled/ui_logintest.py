@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'logintestAGmLZZ.ui'
+## Form generated from reading UI file 'logintestCFBqHl.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.4.3
 ##
@@ -18,6 +18,7 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QApplication, QFrame, QHBoxLayout, QLabel,
     QLineEdit, QMainWindow, QPushButton, QSizePolicy,
     QWidget)
+from . import src_rc
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):

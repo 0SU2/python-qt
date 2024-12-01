@@ -369,6 +369,8 @@ QPushButton:pressed {
    </widget>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="src.qrc"/>
+ </resources>
  <connections/>
 </ui>
