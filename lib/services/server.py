@@ -1,5 +1,5 @@
 import mysql.connector
-from PySide2.QtWidgets import QMainWindow, QMessageBox
+from PySide6.QtWidgets import QMessageBox
 
 def conectar_base_datos():
     try:

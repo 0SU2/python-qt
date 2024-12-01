@@ -3,12 +3,12 @@ from PySide6.QtWidgets import QMainWindow, QMessageBox
 from PySide6.QtGui import QIcon, QPixmap
 
 from lib.static import LOGO_XS_FILE
-from ui.compiled.loginUI import Ui_Login_Menu
+from ui.compiled.ui_logintest import Ui_MainWindow
 
 import mysql.connector
 from lib.services.server import conectar_base_datos
 
-class LoginView(QMainWindow):
+class LoginView(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
 
@@ -16,8 +16,7 @@ class LoginView(QMainWindow):
         self.main_view = None
 
         # * Config UI
-        self.ui = Ui_Login_Menu()
-        self.ui.setupUi(self)
+        self.setupUi(self)
         self.setWindowIcon(QIcon(str(LOGO_XS_FILE)))
         # ! Remove window title bar
         self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
@@ -27,8 +26,8 @@ class LoginView(QMainWindow):
         self.initial_state()
 
         # * Connect Events
-        self.ui.button_close.clicked.connect(self.close)
-        self.ui.button_login.clicked.connect(self.login)
+        self.button_close.clicked.connect(self.close)
+        self.button_login.clicked.connect(self.login)
 
     # * -------------- INHERIT EVENT HANDLES ---------------
     def closeEvent(self, event):
@@ -37,15 +36,14 @@ class LoginView(QMainWindow):
     # * ------------ APPLICATION EVENT HANDLES ------------
     def initial_state(self):
         """ Set initial state for the window """
-        self.ui.text_username.clear()
-        self.ui.text_password.clear()
-        self.ui.text_username.setFocus()
+        self.text_username.clear()
+        self.text_password.clear()
+        self.text_username.setFocus()
 
     def login(self):
         """ Start Log In process """
-        username = self.ui.text_username.text()
-        password = self.ui.text_password.text()
-        print(username, password)
+        username = self.text_username.text()
+        password = self.text_password.text()
 
         self.conexion = conectar_base_datos()
         if self.conexion:
