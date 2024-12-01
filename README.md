@@ -1,22 +1,26 @@
+> [!WARNING]  
+> Its higly recommended that you have python 3.8 or lower
+> [Here's the link to download python 3.8](https://www.python.org/downloads/release/python-389/)
+
 # Python Qt Dashboard
 
-A GUI Login - Dashboard example using Python and Qt.
+A GUI Login - Dashboard example using Python and Qt with connection to MySQL.
 
 ## Run Locally
 
-Clone the project
+Clone the project:
 
 ```bash
-  git clone https://github.com/ruveloper/python-qt-dashboard.git
+  git clone https://github.com/0SU2/python-qt.git
 ```
 
-Go to the project directory
+Go to the project directory:
 
 ```bash
   cd ./python-qt-dashboard
 ```
 
-Create a python virtualenv and install requirements
+Create a python virtualenv and install requirements:
 
 ```bash
   python -m venv .venv
@@ -24,13 +28,8 @@ Create a python virtualenv and install requirements
   pip install -r .\requirements.txt
 ```
 
-Run project
+Run the project:
 
 ```bash
   python main.py
 ```
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
-
