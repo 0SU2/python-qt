@@ -1,3 +1,7 @@
+> [!WARNING]  
+> Its higly recommended that you have python 3.8 or lower
+> [Here's the link to download python 3.8](https://www.python.org/downloads/release/python-389/)
+
 # Python Qt Dashboard
 
 A GUI Login - Dashboard example using Python and Qt with connection to MySQL.
