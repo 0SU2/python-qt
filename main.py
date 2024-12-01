@@ -11,11 +11,16 @@ if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
     
     # Views
-    login_view = LoginView()
+    # si quieres evitar el logear de usuarios, descomenta esta linea
+    # login_view = LoginView()
     main_view = MainView()
-    login_view.main_view = main_view
-    main_view.login_view = login_view
+    
+    # y estas dos:
+    # login_view.main_view = main_view
+    # main_view.login_view = login_view
 
-    login_view.show()
+    # tambien comenta la main_view.show() y descomenta login_view.show()
+    main_view.show()
+    # login_view.show()
 
     app.exec()

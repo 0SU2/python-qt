@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'test2NVGrjg.ui'
+## Form generated from reading UI file 'test2WvlqqF.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.4.3
 ##
@@ -154,6 +154,7 @@ class Ui_MainWindow(object):
         __qtablewidgetitem5 = QTableWidgetItem()
         self.tableProvider.setHorizontalHeaderItem(5, __qtablewidgetitem5)
         self.tableProvider.setObjectName(u"tableProvider")
+        self.tableProvider.setSelectionBehavior(QAbstractItemView.SelectRows)
         self.tableProvider.horizontalHeader().setStretchLastSection(True)
 
         self.verticalLayout_3.addWidget(self.tableProvider)
@@ -194,6 +195,7 @@ class Ui_MainWindow(object):
         self.tableClient.setObjectName(u"tableClient")
         self.tableClient.setHorizontalScrollBarPolicy(Qt.ScrollBarAsNeeded)
         self.tableClient.setSizeAdjustPolicy(QAbstractScrollArea.AdjustIgnored)
+        self.tableClient.setSelectionBehavior(QAbstractItemView.SelectRows)
         self.tableClient.setHorizontalScrollMode(QAbstractItemView.ScrollPerItem)
         self.tableClient.setGridStyle(Qt.SolidLine)
         self.tableClient.horizontalHeader().setCascadingSectionResizes(False)
@@ -239,6 +241,7 @@ class Ui_MainWindow(object):
         self.tableProduct.setObjectName(u"tableProduct")
         self.tableProduct.setAutoFillBackground(False)
         self.tableProduct.setAlternatingRowColors(False)
+        self.tableProduct.setSelectionBehavior(QAbstractItemView.SelectRows)
         self.tableProduct.horizontalHeader().setProperty("showSortIndicator", False)
         self.tableProduct.horizontalHeader().setStretchLastSection(True)
 
@@ -262,6 +265,11 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_3.addWidget(self.btnUpdateRow)
 
+        self.btnAdd = QPushButton(self.widget_5)
+        self.btnAdd.setObjectName(u"btnAdd")
+
+        self.horizontalLayout_3.addWidget(self.btnAdd)
+
         self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout_3.addItem(self.horizontalSpacer_2)
@@ -279,7 +287,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stacked1Contenido.setCurrentIndex(1)
+        self.stacked1Contenido.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -332,5 +340,6 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem15.setText(QCoreApplication.translate("MainWindow", u"Fecha de Expiracion", None));
         self.btnDeleteRow.setText(QCoreApplication.translate("MainWindow", u"Delete", None))
         self.btnUpdateRow.setText(QCoreApplication.translate("MainWindow", u"Update", None))
+        self.btnAdd.setText(QCoreApplication.translate("MainWindow", u"Agregar", None))
     # retranslateUi
 
